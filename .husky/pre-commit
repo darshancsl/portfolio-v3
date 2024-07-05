@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+(git rev-parse -q --verify MERGE_HEAD || git rev-parse -q --verify REBASE_HEAD) || npm run lint-staged

@@ -53,7 +53,7 @@ function App() {
         <StyledWrapper>
             <StyledDescription>Home</StyledDescription>
             <StyledUrl href="https://darshanlakade.in" target="_blank" aria-label="See My Website Here!">
-                See My Website Here!
+                See My Website Here
             </StyledUrl>
 
             <StyledLink to={Paths.TEST_PAGE}>Test Page</StyledLink>

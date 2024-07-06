@@ -1,7 +1,10 @@
 const Paths = {
-    HOME: '/',
-    TEST_PAGE: '/test-page',
-    NOT_FOUND: '*',
+  HOME: '/',
+  ABOUT: '/about',
+  PROJECTS: '/projects',
+  CONTACT: '/contacts',
+  TEST_PAGE: '/test-page',
+  NOT_FOUND: '*',
 };
 
 export default Paths;

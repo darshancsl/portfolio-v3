@@ -4,8 +4,15 @@
         "outDir": "dist",
         "target": "es5",
         "module": "esnext",
-        "types": ["node", "jest"],
-        "lib": ["dom", "dom.iterable", "esnext"],
+        "types": [
+            "node",
+            "jest"
+        ],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
         "jsx": "react",
         "moduleResolution": "node",
         "allowJs": false,
@@ -22,6 +29,13 @@
         "noFallthroughCasesInSwitch": true,
         "downlevelIteration": true
     },
-    "include": ["src/"],
-    "exclude": ["node_modules/", "dist/", "coverage/"]
+    "include": [
+        "src/**/*",
+        "src/components/declarations.d.ts"
+    ],
+    "exclude": [
+        "node_modules/",
+        "dist/",
+        "coverage/"
+    ]
 }

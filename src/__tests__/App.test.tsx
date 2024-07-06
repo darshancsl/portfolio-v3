@@ -1,18 +1,27 @@
+// App.test.tsx
 import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { MemoryRouter } from 'react-router-dom';
 import App from '../App';
+import { ThemeProvider } from '../themes/ThemeProvider';
+import GlobalStyles from '../themes/GlobalStyles';
+
+jest.mock('../components/Header', () => {
+  const MockHeader = () => <div>Header Component</div>;
+  MockHeader.displayName = 'Header';
+  return MockHeader;
+});
 
 describe('App Component', () => {
-    it('renders without crashing', async () => {
-        render(
-            <MemoryRouter>
-                <App />
-            </MemoryRouter>
-        );
-        await waitFor(() => {
-            expect(screen.getByText(/Test Page/i)).toBeInTheDocument();
-        });
-    });
+  it('should render the App component', () => {
+    render(
+      <ThemeProvider>
+        <GlobalStyles />
+        <App />
+      </ThemeProvider>
+    );
+
+    const headerElement = screen.getByText('Header Component');
+    expect(headerElement).toBeInTheDocument();
+  });
 });

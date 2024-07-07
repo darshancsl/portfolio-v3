@@ -10,9 +10,11 @@ export const commonTheme = {
     dark: '#343a40',
   },
   fontSize: {
-    small: '12px',
-    medium: '16px',
-    large: '20px',
+    XSmall: '11px',
+    small: '13px',
+    medium: '15px',
+    large: '17px',
+    xLarge: '19px',
   },
   headings: {
     h1: '34px',
@@ -47,9 +49,9 @@ export const lightTheme: DefaultTheme = {
   highlight: '#f16b36',
   highlightHover: '#da4f18',
   boxShadow: {
-    small: '0 0px 2px #ccc',
-    medium: '0 0px 5px #ccc',
-    large: '0 0px 10px #ccc',
+    small: '0 0px 2px #ababab',
+    medium: '0 0px 5px #ababab',
+    large: '0 0px 10px #ababab',
   },
   text: '#333',
   primary: '#eee',

@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import routes from '../routes';
+import routes from '../dataList/routes';
 import { Link } from 'react-router-dom';
 import Logo from '../themes/Logo';
 import ThemeSwitch from './ThemeSwitch';
 
 const StyledHeader = styled.div`
+  position: sticky;
+  top: 0px;
   min-height: 75px;
   box-shadow: ${(props) => props.theme.boxShadow.large};
   background: ${(props) => props.theme.background};

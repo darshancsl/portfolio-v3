@@ -1,10 +1,10 @@
 import { lazy, LazyExoticComponent, ReactNode } from 'react';
 
-import Paths from './constants/path';
+import Paths from '../constants/path';
 
-const Home = lazy(() => import(/* webpackChunkName: "pages/home" */ './pages/Home'));
-const About = lazy(() => import(/* webpackChunkName: "pages/test-page" */ './pages/About'));
-const NotFound = lazy(() => import(/* webpackChunkName: "pages/not-found" */ './pages/NotFound'));
+const Home = lazy(() => import(/* webpackChunkName: "pages/home" */ '../pages/Home'));
+const About = lazy(() => import(/* webpackChunkName: "pages/test-page" */ '../pages/About'));
+const NotFound = lazy(() => import(/* webpackChunkName: "pages/not-found" */ '../pages/NotFound'));
 
 type TRoute = {
   name: string;
@@ -28,19 +28,19 @@ const routes = [
   },
   {
     name: 'projects',
-    path: Paths.ABOUT,
+    path: Paths.PROJECTS,
     Component: About,
     Fallback: null,
   },
   {
     name: 'contact',
-    path: Paths.ABOUT,
+    path: Paths.CONTACT,
     Component: About,
     Fallback: null,
   },
   {
     name: 'blog',
-    path: Paths.ABOUT,
+    path: Paths.BLOG,
     Component: About,
     Fallback: null,
   },

@@ -5,10 +5,22 @@ import '@testing-library/jest-dom';
 import App from '../App';
 import { ThemeProvider } from '../themes/ThemeProvider';
 import GlobalStyles from '../themes/GlobalStyles';
+import { MemoryRouter } from 'react-router-dom';
 
 jest.mock('../components/Header', () => {
   const MockHeader = () => <div>Header Component</div>;
   MockHeader.displayName = 'Header';
+  return MockHeader;
+});
+jest.mock('../components/Sidebar', () => {
+  const MockHeader = () => <div>Sidebar Component</div>;
+  MockHeader.displayName = 'Sidebar';
+  return MockHeader;
+});
+
+jest.mock('../components/SidebarOverlay', () => {
+  const MockHeader = () => <div>SidebarOverlay Component</div>;
+  MockHeader.displayName = 'SidebarOverlay';
   return MockHeader;
 });
 
@@ -17,7 +29,9 @@ describe('App Component', () => {
     render(
       <ThemeProvider>
         <GlobalStyles />
-        <App />
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>
       </ThemeProvider>
     );
 
